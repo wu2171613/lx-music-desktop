@@ -1,3 +1,9 @@
+import { EventEmitter } from 'events';
+window.EventEmitter = EventEmitter;
+
+// 首先导入polyfill确保全局变量正确定义
+import './utils/polyfill'
+// 然后导入其他模块
 import '@common/error'
 import { createApp } from 'vue'
 

@@ -62,6 +62,14 @@ const router = createRouter({
         name: 'Setting',
       },
     },
+    {
+      path: '/webdav',
+      name: 'WebDAV',
+      component: require('./views/WebDAV.vue').default,
+      meta: {
+        name: 'WebDAV',
+      },
+    },
     { path: '/:pathMatch(.*)*', redirect: '/search' },
   ],
   linkActiveClass: 'active-link',

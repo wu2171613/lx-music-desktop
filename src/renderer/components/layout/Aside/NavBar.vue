@@ -38,6 +38,15 @@ export default {
           enable: true,
         },
         {
+          to: '/webdav',
+          tips: 'WebDAV',
+          icon: '#icon-webdav', // 使用自定义 WebDAV 云存储图标
+          iconSize: '0 0 48 48',
+          size,
+          name: 'WebDAV',
+          enable: true,
+        },
+        {
           to: '/songList/list',
           tips: t('song_list'),
           icon: '#icon-album',

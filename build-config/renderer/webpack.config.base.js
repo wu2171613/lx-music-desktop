@@ -130,6 +130,10 @@ module.exports = {
       },
     ],
   },
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
   plugins: [
     new HTMLPlugin({
       filename: 'index.html',

@@ -92,13 +92,14 @@ export const createWindow = () => {
     webPreferences: {
       session: ses,
       nodeIntegrationInWorker: true,
-      contextIsolation: false,
+      contextIsolation: true, // 必须为 true
       webSecurity: false,
-      nodeIntegration: true,
+      nodeIntegration: false, // 建议为 false
       sandbox: false,
       enableWebSQL: false,
       webgl: false,
       spellcheck: false, // 禁用拼写检查器
+      preload: path.join(__dirname, 'preload.js'),
     },
   }
   if (global.envParams.cmdParams.dt) options.backgroundColor = theme.colors['--color-primary-light-1000']

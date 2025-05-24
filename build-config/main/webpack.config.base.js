@@ -5,6 +5,9 @@ const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
   target: 'electron-main',
+  entry: {
+    preload: path.join(__dirname, '../../src/main/preload.js'),
+  },
   output: {
     filename: '[name].js',
     library: {

@@ -8,3 +8,10 @@ declare module '*.vue' {
   const component: Component
   export default component
 }
+
+import { EventEmitter } from 'events';
+declare global {
+  interface Window {
+    EventEmitter: typeof EventEmitter
+  }
+}
